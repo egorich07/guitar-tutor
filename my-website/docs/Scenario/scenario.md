@@ -6,7 +6,7 @@ sidebar_position: 1
 
 
 ```
-@startuml
+@startuml plantUML
 left to right direction
 
 actor НеавторизованныйПользователь
