@@ -1,0 +1,289 @@
+openapi: 3.0.3
+info:
+  title: Music Learning API
+  description: API для взаимодействия с системой музыкального обучения.
+  version: 1.0.0
+servers:
+  - url: https://api.musicai.com/v1
+tags:
+  - name: Authorization
+    description: Эндпоинты для авторизации и регистрации.
+  - name: Preferences
+    description: Эндпоинты для выбора инструмента и уровня игры.
+  - name: Lessons
+    description: Эндпоинты для работы с уроками.
+paths:
+  /auth/login:
+    post:
+      tags:
+        - Authorization
+      summary: Авторизация пользователя.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                login:
+                  type: string
+                  description: Логин пользователя.
+                password:
+                  type: string
+                  description: Пароль пользователя.
+              required:
+                - login
+                - password
+      responses:
+        '200':
+          description: Успешная авторизация.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    description: Токен для авторизации.
+                  userId:
+                    type: string
+                    description: Идентификатор пользователя.
+  /auth/register:
+    post:
+      tags:
+        - Authorization
+      summary: Регистрация нового пользователя.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                  description: Email пользователя.
+                password:
+                  type: string
+                  format: password
+                  description: Пароль пользователя.
+                name:
+                  type: string
+                  description: Имя пользователя.
+              required:
+                - email
+                - password
+                - name
+      responses:
+        '201':
+          description: Успешная регистрация.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  userId:
+                    type: string
+                    description: Идентификатор нового пользователя.
+                  message:
+                    type: string
+                    example: Registration successful.
+  /user/preferences/instrument:
+    post:
+      tags:
+        - Preferences
+      summary: Сохранение выбранного инструмента.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userId:
+                  type: string
+                  description: Идентификатор пользователя.
+                instrumentId:
+                  type: string
+                  enum:
+                    - guitar
+                    - piano
+                    - bass
+                    - ukulele
+                  description: Идентификатор инструмента.
+              required:
+                - userId
+                - instrumentId
+      responses:
+        '200':
+          description: Успешное сохранение.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Preferences saved successfully.
+  /user/preferences/difficulty:
+    post:
+      tags:
+        - Preferences
+      summary: Сохранение выбранного уровня сложности.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userId:
+                  type: string
+                  description: Идентификатор пользователя.
+                difficulty:
+                  type: string
+                  enum:
+                    - beginner
+                    - intermediate
+                    - advanced
+                  description: Уровень сложности.
+              required:
+                - userId
+                - difficulty
+      responses:
+        '200':
+          description: Успешное сохранение.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Preferences saved successfully.
+  /lessons:
+    get:
+      tags:
+        - Lessons
+      summary: Получение списка уроков.
+      parameters:
+        - name: instrumentId
+          in: query
+          required: true
+          schema:
+            type: string
+          description: ID выбранного инструмента.
+        - name: difficulty
+          in: query
+          required: true
+          schema:
+            type: string
+            enum:
+              - beginner
+              - intermediate
+              - advanced
+          description: Уровень сложности.
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+          description: Номер страницы.
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+            default: 10
+          description: Количество элементов на странице.
+      responses:
+        '200':
+          description: Список уроков.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  lessons:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        lessonId:
+                          type: string
+                          description: Идентификатор урока.
+                        title:
+                          type: string
+                          description: Название урока.
+                        description:
+                          type: string
+                          description: Описание урока.
+                        difficulty:
+                          type: string
+                          enum:
+                            - beginner
+                            - intermediate
+                            - advanced
+                          description: Уровень сложности.
+                        duration:
+                          type: string
+                          description: Длительность урока.
+                        imageUrl:
+                          type: string
+                          description: Ссылка на изображение урока.
+                  pagination:
+                    type: object
+                    properties:
+                      page:
+                        type: integer
+                        description: Номер текущей страницы.
+                      pageSize:
+                        type: integer
+                        description: Количество элементов на странице.
+                      totalPages:
+                        type: integer
+                        description: Общее количество страниц.
+  /lessons/{lessonId}:
+    get:
+      tags:
+        - Lessons
+      summary: Получение информации об уроке.
+      parameters:
+        - name: lessonId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Идентификатор урока.
+      responses:
+        '200':
+          description: Информация об уроке.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  lessonId:
+                    type: string
+                  title:
+                    type: string
+                  description:
+                    type: string
+                  videoUrl:
+                    type: string
+                    description: Ссылка на видеоматериал урока.
+                  progress:
+                    type: object
+                    properties:
+                      completed:
+                        type: integer
+                        description: Прогресс выполнения (в процентах).
+                      total:
+                        type: integer
+                        description: Общий объем урока (в процентах).
+                  recommendations:
+                    type: array
+                    items:
+                      type: string
+                    description: Список рекомендаций.
+components: {}

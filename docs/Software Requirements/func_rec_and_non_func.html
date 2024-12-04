@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Software Requirements/func_rec_and_non_func" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.6.3">
+<title data-rh="true">Функциональные и нефункциональные требования к версии 1.0 | Guitar tutor</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://egorich07.github.io/guitar-tutor/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://egorich07.github.io/guitar-tutor/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://egorich07.github.io/guitar-tutor/docs/Software Requirements/func_rec_and_non_func"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Функциональные и нефункциональные требования к версии 1.0 | Guitar tutor"><meta data-rh="true" name="description" content="Use Case 1: Регистрация пользователя (Must-have)"><meta data-rh="true" property="og:description" content="Use Case 1: Регистрация пользователя (Must-have)"><link data-rh="true" rel="icon" href="/guitar-tutor/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://egorich07.github.io/guitar-tutor/docs/Software Requirements/func_rec_and_non_func"><link data-rh="true" rel="alternate" href="https://egorich07.github.io/guitar-tutor/docs/Software Requirements/func_rec_and_non_func" hreflang="en"><link data-rh="true" rel="alternate" href="https://egorich07.github.io/guitar-tutor/docs/Software Requirements/func_rec_and_non_func" hreflang="x-default"><script src="https://cdn.jsdelivr.net/npm/docusaurus-plugin-drawio/viewer.min.js"></script><link rel="stylesheet" href="/guitar-tutor/assets/css/styles.30cb67da.css">
+<script src="/guitar-tutor/assets/js/runtime~main.6d1c63ac.js" defer="defer"></script>
+<script src="/guitar-tutor/assets/js/main.2bec55d8.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/guitar-tutor/"><div class="navbar__logo"><img src="/guitar-tutor/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/guitar-tutor/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">My Site</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/guitar-tutor/docs/intro">Tutorial</a><a class="navbar__item navbar__link" href="/guitar-tutor/blog">Blog</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/guitar-tutor/docs/intro">Домашняя страница</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" href="/guitar-tutor/docs/category/требования">Требования</a><button aria-label="Collapse sidebar category &#x27;Требования&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/guitar-tutor/docs/Software Requirements/func_rec_and_non_func">Функциональные и нефункциональные требования к версии 1.0</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/guitar-tutor/docs/category/апи">АПИ</a><button aria-label="Expand sidebar category &#x27;АПИ&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/guitar-tutor/docs/category/erd">ERD</a><button aria-label="Expand sidebar category &#x27;ERD&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/guitar-tutor/docs/category/сценарии">Сценарии</a><button aria-label="Expand sidebar category &#x27;Сценарии&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/guitar-tutor/docs/category/архитектура">Архитектура</a><button aria-label="Expand sidebar category &#x27;Архитектура&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/guitar-tutor/docs/Concept">Интерактивный преподаватель игры на музыкальных инструментах</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/guitar-tutor/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/guitar-tutor/docs/category/требования"><span itemprop="name">Требования</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Функциональные и нефункциональные требования к версии 1.0</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Функциональные и нефункциональные требования к версии 1.0</h1></header>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="use-case-1-регистрация-пользователя-must-have">Use Case 1: Регистрация пользователя (Must-have)<a href="#use-case-1-регистрация-пользователя-must-have" class="hash-link" aria-label="Direct link to Use Case 1: Регистрация пользователя (Must-have)" title="Direct link to Use Case 1: Регистрация пользователя (Must-have)">​</a></h3>
+<ul>
+<li>
+<p><strong>Имя:</strong> Регистрация пользователя</p>
+</li>
+<li>
+<p><strong>Цель:</strong> Создать новую учетную запись для доступа к функционалу приложения.</p>
+</li>
+<li>
+<p><strong>Актор:</strong> Новый пользователь</p>
+</li>
+<li>
+<p><strong>Предусловия:</strong></p>
+<ul>
+<li>
+<p>Пользователь не имеет существующей учетной записи в приложении.</p>
+</li>
+<li>
+<p>Пользователь подключен к интернету.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Активатор (триггер):</strong></p>
+<ul>
+<li>Пользователь нажимает на кнопку &quot;Регистрация&quot; на экране приветствия приложения.</li>
+</ul>
+</li>
+<li>
+<p><strong>Результат (постусловие):</strong></p>
+<ul>
+<li>Учетная запись успешно создана, и пользователь перенаправлен на главный экран приложения.</li>
+</ul>
+</li>
+<li>
+<p><strong>Порядок событий (основной поток):</strong></p>
+<ol>
+<li>
+<p>Пользователь открывает приложение.</p>
+</li>
+<li>
+<p>Система отображает экран приветствия с опциями &quot;Войти&quot; и &quot;Регистрация&quot;.</p>
+</li>
+<li>
+<p>Пользователь выбирает &quot;Регистрация&quot;.</p>
+</li>
+<li>
+<p>Система предлагает выбрать способ регистрации: через электронную по чту или социальные сети (VK, Yandex, Google).</p>
+</li>
+<li>
+<p>Пользователь вводит необходимые данные (имя пользователя, логин ( которым может служить также электронная почта), пароль) или выбирает социальную сеть.</p>
+</li>
+<li>
+<p>Система отправляет подтверждающий код на введенную электронную почту или телефон.</p>
+</li>
+<li>
+<p>Пользователь вводит полученный код.</p>
+</li>
+<li>
+<p>Система подтверждает регистрацию и создает учетную запись.</p>
+</li>
+<li>
+<p>Пользователь перенаправляется на главный экран приложения.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Альтернативные пути и дополнения Use Case:</strong></p>
+<ul>
+<li>
+<p>Пользователь выбирает регистрацию через социальную сеть.</p>
+<ol>
+<li>
+<p>После выбора социальной сети пользователь перенаправляется на страницу авторизации выбранной сети.</p>
+</li>
+<li>
+<p>После успешной авторизации система получает необходимую информацию и создает учетную запись.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Пользователь не вводит код подтверждения или вводит неверный код.</p>
+<ul>
+<li>Система отображает сообщение об ошибке и предлагает повторно отправить код.</li>
+</ul>
+</li>
+<li>
+<p>Пользователь пытается зарегистрироваться с уже существующей электронной почтой.</p>
+<ul>
+<li>Система отображает сообщение о том, что электронная почта уже зарегистрирована, и предлагает восстановить пароль или войти в существующую учетную запись.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Бизнес-правила:</strong></p>
+<ul>
+<li>
+<p>Электронная почта должна быть уникальной для каждой учетной записи.</p>
+</li>
+<li>
+<p>Пароль должен соответствовать минимальным требованиям безопасности (например, минимум 8 символов, наличие букв и цифр).</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="use-case-2-авторизация-пользователя-must-have">Use Case 2: Авторизация пользователя (Must-have)<a href="#use-case-2-авторизация-пользователя-must-have" class="hash-link" aria-label="Direct link to Use Case 2: Авторизация пользователя (Must-have)" title="Direct link to Use Case 2: Авторизация пользователя (Must-have)">​</a></h3>
+<p><strong>Имя:</strong> Авторизация пользователя</p>
+<ul>
+<li>
+<p><strong>Цель:</strong> Войти в личную учетную запись для доступа к функционалу приложения.</p>
+</li>
+<li>
+<p><strong>Актор:</strong> Зарегистрированный пользователь</p>
+</li>
+<li>
+<p><strong>Предусловия:</strong></p>
+<ul>
+<li>
+<p>Пользователь успешно зарегистрирован в приложении</p>
+</li>
+<li>
+<p>Пользователь подключен к интернету.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Активатор (триггер):</strong></p>
+<ul>
+<li>Пользователь нажимает на кнопку &quot;Войти&quot; на экране пр иветствия приложения.</li>
+</ul>
+</li>
+<li>
+<p><strong>Результат (постусловие):</strong></p>
+<ul>
+<li>Пользователь авторизовался и перенаправлен на главный экран приложения.</li>
+</ul>
+</li>
+<li>
+<p><strong>Порядок событий (основной поток):</strong></p>
+<ol>
+<li>
+<p>Пользователь открывает приложение.</p>
+</li>
+<li>
+<p>Система отображает экран приветствия с опциями &quot;Войти&quot; и &quot;Регистрация&quot;.</p>
+</li>
+<li>
+<p>Пользователь выбирает &quot;Войти&quot;.</p>
+</li>
+<li>
+<p>Система предлагает выбрать способ входа: через имеющийся логин и пароль или социальные сети (VK, Yandex, Google).</p>
+</li>
+<li>
+<p>Пользователь вводит необходимые данные: логин ( которым может служить также электронная почта) и пароль или выбирает социальную сеть.</p>
+</li>
+<li>
+<p>Система проверяет введённые данные или выполняет авторизацию через социальную сеть.</p>
+</li>
+<li>
+<p>В случае успешной проверки, пользователь авторизован и перенаправлен на главный экран приложения.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Альтернативные пути и дополнения Use Case:</strong></p>
+</li>
+<li>
+<p>Пользователь выбирает авторизацию через социальную сеть.</p>
+<ol>
+<li>
+<p>После выбора социальной сети пользователь перенаправляется на страницу авторизации выбранной сети.</p>
+</li>
+<li>
+<p>После успе шной авторизации система получает необходимые данные и завершает авторизацию пользователя.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Неверный пароль.</p>
+<ol>
+<li>
+<p>Пользователь вводит неверный пароль.</p>
+</li>
+<li>
+<p>Система отображает сообщение об ошибке и предлагает повторно ввести данные.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Авторизация через электронную почту, которая уже используется.</p>
+<ol>
+<li>
+<p>Система отображает сообщение, что учетная запись с этой почтой уже существует.</p>
+</li>
+<li>
+<p>Пользователю предлагается восстановить пароль или войти в существующую учетную запись.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Бизнес-правила:</strong></p>
+<ul>
+<li>
+<p>Электронная почта должна быть уникальной для каждой учетной записи.</p>
+</li>
+<li>
+<p>Пароль должен соответствовать минимальным требованиям безопасности (например, минимум 8 символов, наличие букв и цифр).</p>
+</li>
+<li>
+<p>Авторизация через социальные сети:</p>
+<ul>
+<li>Доступные социальные сети для авторизации могут зависеть от региона (например, Google, VK, Yandex) и должны соответствовать требованиям системы OAuth.</li>
+</ul>
+</li>
+<li>
+<p>Ограничение попыток авторизации:</p>
+<ul>
+<li>При нескольких неудачных попытках авторизации (5 подряд неверных паролей), учетная запись до лжна быть временно заблокирована для предотвращения атак на систему.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="use-case-3-персонализация-профиля-must-have">Use Case 3: Персонализация профиля (Must-have)<a href="#use-case-3-персонализация-профиля-must-have" class="hash-link" aria-label="Direct link to Use Case 3: Персонализация профиля (Must-have)" title="Direct link to Use Case 3: Персонализация профиля (Must-have)">​</a></h3>
+<ul>
+<li>
+<p><strong>Имя</strong>: Персонализация профиля пользователя</p>
+</li>
+<li>
+<p><strong>Цель</strong>: Настроить профиль, включая музыкальные предпочтения и уровень владения инструментом.</p>
+</li>
+<li>
+<p><strong>Актор</strong>: Зарегистрированный пользователь</p>
+</li>
+<li>
+<p><strong>Предусловия</strong>: Пользователь зарегистрирован и вошел в приложение.</p>
+</li>
+<li>
+<p><strong>Активатор (триггер)</strong>: Пользователь открывает профиль и начинает процесс персонализации.</p>
+</li>
+<li>
+<p><strong>Результат (постусловие)</strong>: Настройки профиля сохранены, система подстраивает уроки под предпочтения пользователя.</p>
+</li>
+<li>
+<p><strong>Порядок событий (основной поток)</strong>:</p>
+<ol>
+<li>
+<p>Пользователь открывает настройки профиля.</p>
+</li>
+<li>
+<p>Пользователь выбирает музыкальный инструмент.</p>
+</li>
+<li>
+<p>Пользователь указывает свой уровень владе ния инструментом.</p>
+</li>
+<li>
+<p>Пользователь выбирает любимые музыкальные жанры и исполнителей.</p>
+</li>
+<li>
+<p>Система сохраняет настройки и предлагает персонализированные уроки.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Альтернативные пути и дополнения Use Case</strong>:</p>
+<ul>
+<li>
+<p>Пользователь не выбрал музыкальные предпочтения – система предлагает стандартные уроки.</p>
+</li>
+<li>
+<p>Пользователь может пропустить настройку и вернуться к ней позже.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Бизнес-правила</strong>:</p>
+<ul>
+<li>
+<p>Пользователь может менять свои музыкальные предпочтения в любое время.</p>
+</li>
+<li>
+<p>Уровень игры можно корректировать через настройки профиля.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="use-case-4-просмотр-библиотеки-видеоуроков-must-have">Use Case 4: Просмотр библиотеки видеоуроков (Must-have)<a href="#use-case-4-просмотр-библиотеки-видеоуроков-must-have" class="hash-link" aria-label="Direct link to Use Case 4: Просмотр библиотеки видеоуроков (Must-have)" title="Direct link to Use Case 4: Просмотр библиотеки видеоуроков (Must-have)">​</a></h3>
+<ul>
+<li>
+<p><strong>Имя:</strong> Просмотр библиотеки видеоуроков</p>
+</li>
+<li>
+<p><strong>Цель:</strong> Позволить пользователю выбирать уроки из доступной библиотеки и проходить их.</p>
+</li>
+<li>
+<p><strong>Актор:</strong> Зарег истрированный пользователь</p>
+</li>
+<li>
+<p><strong>Предусловия:</strong> Пользователь находится на главной странице приложения и авторизован в системе.</p>
+</li>
+<li>
+<p><strong>Активатор (триггер):</strong> Пользователь открывает раздел видеоуроков.</p>
+</li>
+<li>
+<p><strong>Результат (постусловие):</strong> Пользователь просматривает уроки и сохраняет их в избранное.</p>
+</li>
+<li>
+<p><strong>Порядок событий (основной поток):</strong></p>
+<ol>
+<li>
+<p>Пользователь открывает приложение и находится на главной странице.</p>
+</li>
+<li>
+<p>Пользователь выбирает раздел &quot;Видеоуроки&quot; в меню навигации.</p>
+</li>
+<li>
+<p>Система отображает список доступных видеоуроков с предварительным просмотром.</p>
+</li>
+<li>
+<p>Пользователь может просмотреть информацию о каждом уроке (название, длительность, уровень сложности, краткое описание).</p>
+</li>
+<li>
+<p>Пользователь выбирает урок для просмотра, и система начинает воспроизведение видео.</p>
+</li>
+<li>
+<p>Во время просмотра пользователь имеет возможность ставить видео на паузу, перематывать и добавлять урок в избранное.</p>
+</li>
+<li>
+<p>После завершения просмотра пользователь может вернуться к списку видеоуроков или перейти к следующему уроку.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Альтернативные пути и дополнения Use Case:</strong></p>
+<ul>
+<li>
+<p>Пользователь не находит интересующий его урок.</p>
+<ol>
+<li>Система предлагает использовать фильтры по жанрам, уровню сложности или исполнителю.</li>
+</ol>
+</li>
+<li>
+<p>Видео не воспроизводится из-за проблем с интернет-соединением.</p>
+<ol>
+<li>Система отображает сообщение об ошибке и предлагает повторить попытку позже.</li>
+</ol>
+</li>
+<li>
+<p>Пользователь хочет сохранить урок в избранное.</p>
+<ol>
+<li>
+<p>Пользователь нажимает кнопку &quot;Добавить в избранное&quot;.</p>
+</li>
+<li>
+<p>Система подтверждает, что урок успешно добавлен в избранное.</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Бизнес-правила:</strong></p>
+<ol>
+<li>
+<p><strong>Доступность уроков:</strong> Все видеоуроки должны быть доступны пользователю в зависимости от его подписки (бесплатная или платная).</p>
+</li>
+<li>
+<p><strong>Сохранение избранного:</strong> Пользователь может сохранять до 50 уроков в разделе &quot;Избранное&quot;.</p>
+</li>
+<li>
+<p><strong>Качество видео:</strong> Все видеоуроки должны быть доступны в разных качествах (720p, 1080p) в зависимости от скорости интернет-соединения пользователя.</p>
+</li>
+<li>
+<p><strong>Аналитика просмотра:</strong> Система должна отслеживать, какие уроки были просмотрен ы пользователем, для предоставления рекомендаций в будущем.</p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="use-case-5-получение-обратной-связи-в-реальном-времени-must-have">Use Case 5: Получение обратной связи в реальном времени (Must-have)<a href="#use-case-5-получение-обратной-связи-в-реальном-времени-must-have" class="hash-link" aria-label="Direct link to Use Case 5: Получение обратной связи в реальном времени (Must-have)" title="Direct link to Use Case 5: Получение обратной связи в реальном времени (Must-have)">​</a></h3>
+<ul>
+<li>
+<p><strong>Имя:</strong> Получение обратной связи в реальном времени</p>
+</li>
+<li>
+<p><strong>Цель:</strong> Анализировать исполнение пользователя и предоставить рекомендации по улучшению в реальном времени.</p>
+</li>
+<li>
+<p><strong>Актор:</strong> Пользователь, выполняющий задание урока</p>
+</li>
+<li>
+<p><strong>Предусловия:</strong> Пользователь проходит урок и использует функцию анализа в реальном времени, а также имеет включенный микрофон.</p>
+</li>
+<li>
+<p><strong>Активатор (триггер):</strong> Пользователь начинает выполнение задания с включенной функцией обратной связи.</p>
+</li>
+<li>
+<p><strong>Результат (постусловие):</strong> Пользователь получает обратную связь и корректирует свои действия в реальном времени.</p>
+</li>
+<li>
+<p><strong>Порядок с обытий (основной поток):</strong></p>
+<ol>
+<li>
+<p>Пользователь начинает играть по заданию урока.</p>
+</li>
+<li>
+<p>Система анализирует звук с помощью микрофона и распознает ноты, ритм и технику исполнения.</p>
+</li>
+<li>
+<p>Система предоставляет обратную связь в реальном времени о точности нот, ритме и технике.</p>
+</li>
+<li>
+<p>Пользователь видит визуальные подсказки и звуковые комментарии, которые помогают ему исправить ошибки.</p>
+</li>
+<li>
+<p>Пользователь корректирует свои действия на основе полученной обратной связи.</p>
+</li>
+<li>
+<p>Система продолжает анализировать исполнение и обновляет обратную связь по мере необходимости.</p>
+</li>
+<li>
+<p>Пользователь завершает выполнение задания и получает итоговую оценку.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Альтернативные пути и дополнения Use Case:</strong></p>
+<ul>
+<li>
+<p>Проблемы с интернетом</p>
+<ol>
+<li>Если связь нестабильна, система предлагает продолжить урок без обратной связи, информируя пользователя об отсутствии анализа.</li>
+</ol>
+</li>
+<li>
+<p>Пользователь отключает обратную связь</p>
+<ol>
+<li>Пользователь может отключить функцию обратной связи в настройках, и система продолжит урок, не предоставляя анализа.</li>
+</ol>
+</li>
+<li>
+<p>Пользователь не со гласен с полученной обратной связью</p>
+<ol>
+<li>Пользователь может оставить отзыв о качестве анализа, и система будет учитывать это в будущих обновлениях.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Бизнес-правила:</strong></p>
+<ol>
+<li>
+<p>Обратная связь доступна только при стабильном интернет-соединении. В случае разрыва соединения система должна уведомить пользователя о необходимости стабильного соединения для получения анализа.</p>
+</li>
+<li>
+<p>Пользователь может настроить параметры чувствительности анализа, включая точность и частоту предоставления обратной связи.</p>
+</li>
+<li>
+<p>Все данные анализа должны сохраняться для последующей аналитики и рекомендаций.</p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="use-case-6-отслеживание-прогресса-пользователя-should-have">Use case 6: Отслеживание прогресса пользователя (Should-have)<a href="#use-case-6-отслеживание-прогресса-пользователя-should-have" class="hash-link" aria-label="Direct link to Use case 6: Отслеживание прогресса пользователя (Should-have)" title="Direct link to Use case 6: Отслеживание прогресса пользователя (Should-have)">​</a></h3>
+<ul>
+<li>
+<p><strong>Имя:</strong> Отслеживание прогресса пользователя</p>
+</li>
+<li>
+<p><strong>Цель:</strong> Предоставить пользователю возможность видеть свой прогресс по пройденным урокам и заданиям, а также получать рекомендации по улучшению на основе данных анализа.</p>
+</li>
+<li>
+<p><strong>Актор:</strong> Зарегистрированный пользователь, выполняющий уроки</p>
+</li>
+<li>
+<p><strong>Предусловия:</strong> Пользователь зарегистрирован и авторизован в системе, система сохраняет данные об уроках, которые проходил пользователь.</p>
+</li>
+<li>
+<p><strong>Активатор (триггер):</strong> Пользователь открывает раздел &quot;Прогресс&quot; или завершает урок.</p>
+</li>
+<li>
+<p><strong>Результат (постусловие):</strong> Пользователь видит статистику пройденных уроков, общие результаты и рекомендации по улучшению навыков.</p>
+</li>
+<li>
+<p><strong>Порядок событий (основной поток):</strong></p>
+<ol>
+<li>
+<p>Пользователь завершает урок или задание.</p>
+</li>
+<li>
+<p>Система анализирует результаты выполнения задания.</p>
+</li>
+<li>
+<p>Система сохраняет информацию о выполненных уроках и результатах в личном профиле пользователя.</p>
+</li>
+<li>
+<p>Пользователь открывает раздел &quot;Прогресс&quot;.</p>
+</li>
+<li>
+<p>Система отображает статистику: количество выполненных уроков, оценка точности, частота тренировок, уровни сложности.</p>
+</li>
+<li>
+<p>Пользователь получает персонализированные рекомен дации по улучшению игры.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Альтернативные пути и дополнения Use Case:</strong></p>
+<ul>
+<li>
+<p><strong>Пользователь не завершил урок:</strong> Система сохраняет прогресс до момента завершения и предлагает продолжить урок в следующий раз.</p>
+</li>
+<li>
+<p><strong>Пользователь не согласен с оценкой:</strong> Пользователь может оставить отзыв или запросить повторный анализ выполненного задания.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Бизнес-правила:</strong></p>
+<ul>
+<li>
+<p>Прогресс по каждому уроку и заданию сохраняется в профиле пользователя.</p>
+</li>
+<li>
+<p>Система должна предоставлять рекомендации по улучшению на основе собранных данных о результатах уроков.</p>
+</li>
+<li>
+<p>Пользователь должен иметь возможность просматривать статистику за любой период времени (день, неделя, месяц).</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="use-case-7-уведомления-о-новых-уроках-и-обновлениях-should-have">Use case 7: Уведомления о новых уроках и обновлениях: (Should-have)<a href="#use-case-7-уведомления-о-новых-уроках-и-обновлениях-should-have" class="hash-link" aria-label="Direct link to Use case 7: Уведомления о новых уроках и обновлениях: (Should-have)" title="Direct link to Use case 7: Уведомления о новых уроках и обновлениях: (Should-have)">​</a></h3>
+<ul>
+<li>
+<p><strong>Имя:</strong> Уведомления о новых уроках и обновлениях</p>
+</li>
+<li>
+<p><strong>Цель:</strong> Информировать пользователей о новых доступных уроках, обновлениях и других событиях в приложении с помощью push-уведомлений или e-mail.</p>
+</li>
+<li>
+<p><strong>Актор:</strong> Зарегистрированный пользователь</p>
+</li>
+<li>
+<p><strong>Предусловия:</strong> Пользователь авторизован в приложении и включил уведомления в настройках.</p>
+</li>
+<li>
+<p><strong>Активатор (триггер):</strong> Система добавляет новый урок или обновление, либо срабатывает заранее настроенное событие (напоминание о занятии, событие в календаре).</p>
+</li>
+<li>
+<p><strong>Результат (постусловие):</strong> Пользователь получает уведомление о новом уроке, обновлении или другом событии и может перейти к соответствующему разделу приложения.</p>
+</li>
+<li>
+<p><strong>Порядок событий (основной поток):</strong></p>
+<ol>
+<li>
+<p>Система добавляет новый урок или обновление.</p>
+</li>
+<li>
+<p>Пользователь получает push-уведомление или письмо на электронную почту с информацией о новом уроке или обновлении.</p>
+</li>
+<li>
+<p>Пользователь открывает уведомление.</p>
+</li>
+<li>
+<p>Система перенаправляет пользователя на соответствующий экран в приложении (например, на страниц у нового урока или обновления).</p>
+</li>
+<li>
+<p>Пользователь может просмотреть урок, добавить его в избранное или сразу приступить к обучению.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Альтернативные пути и дополнения Use Case:</strong></p>
+<ul>
+<li>
+<p><strong>Пользователь отключил уведомления:</strong> В случае отключенных уведомлений система отображает информацию о новых уроках или обновлениях при следующем запуске приложения (например, через баннер или сообщение в ленте новостей).</p>
+</li>
+<li>
+<p><strong>Пользователь пропустил уведомление:</strong> Пользователь может видеть все уведомления в разделе &quot;Уведомления&quot; или &quot;Новости&quot; приложения.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Бизнес-правила:</strong></p>
+<ul>
+<li>
+<p>Уведомления отправляются только пользователям, которые дали согласие на их получение.</p>
+</li>
+<li>
+<p>Уведомления могут быть настроены на разные типы событий (например, новые уроки, обновления, специальные предложения).</p>
+</li>
+<li>
+<p>Уведомления должны быть ненавязчивыми, не нарушать процесс обучения, и их частота может быть ограничена (например, не более одного уведомления в день).</p>
+</li>
+<li>
+<p>Пользователь может настроить типы уведомлений (push, e-mail) и выбрать, от каких уведо млений отказаться в настройках профиля.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="use-case-8-мобильная-версия-офлайн-could-have">Use case 8: Мобильная версия офлайн (Could-have)<a href="#use-case-8-мобильная-версия-офлайн-could-have" class="hash-link" aria-label="Direct link to Use case 8: Мобильная версия офлайн (Could-have)" title="Direct link to Use case 8: Мобильная версия офлайн (Could-have)">​</a></h3>
+<ul>
+<li>
+<p><strong>Имя:</strong> Мобильная версия офлайн</p>
+</li>
+<li>
+<p><strong>Цель:</strong> Позволить пользователям проходить уроки и просматривать видеоматериалы в офлайн-режиме.</p>
+</li>
+<li>
+<p><strong>Актор:</strong> Зарегистрированный пользователь, желающий пройти урок без доступа к интернету</p>
+</li>
+<li>
+<p><strong>Предусловия:</strong> Пользователь заранее загрузил уроки и материалы для просмотра в офлайн-режиме.</p>
+</li>
+<li>
+<p><strong>Активатор (триггер):</strong> Пользователь запускает приложение в условиях отсутствия интернет-соединения и открывает ранее загруженные уроки.</p>
+</li>
+<li>
+<p><strong>Результат (постусловие):</strong> Пользователь успешно проходит уроки в офлайн-режиме, а результаты сохраняются локально до восстановления интернет-соединения.</p>
+</li>
+<li>
+<p><strong>Порядок событий (основной поток):</strong></p>
+<ol>
+<li>
+<p>Пользователь открывает прило жение в режиме офлайн.</p>
+</li>
+<li>
+<p>Система отображает доступные для просмотра и прохождения уроки, которые были заранее загружены.</p>
+</li>
+<li>
+<p>Пользователь выбирает урок и начинает его просмотр или выполнение.</p>
+</li>
+<li>
+<p>Система сохраняет результаты выполнения задания локально на устройстве.</p>
+</li>
+<li>
+<p>При восстановлении интернет-соединения система синхронизирует данные с сервером и обновляет прогресс пользователя.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Альтернативные пути и дополнения Use Case:</strong></p>
+<ul>
+<li>
+<p><strong>Пользователь не загрузил уроки заранее:</strong> Система информирует пользователя о необходимости загрузки уроков для офлайн-режима и предлагает вернуться к онлайн-режиму при подключении к интернету.</p>
+</li>
+<li>
+<p><strong>Нет места на устройстве для загрузки:</strong> Система уведомляет пользователя об этом и предлагает освободить место или выбрать меньшее количество уроков для загрузки.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Бизнес-правила:</strong></p>
+<ul>
+<li>
+<p>Пользователь может загружать ограниченное количество уроков для использования в офлайн-режиме (например, до 10 уроков).</p>
+</li>
+<li>
+<p>Результаты выполнения офлайн-уроков должны синхронизироваться с сервером при первом подключении к интернету.</p>
+</li>
+<li>
+<p>Уроки доступны в офлайн-режиме в течение ограниченного времени (например, 7 дней после загрузки).</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Я выбрал формат <strong>Use Case</strong> для описания требований, чтобы наглядно показать, как пользователь взаимодействует с приложением. Такой формат помогает легко понять, как каждая функция работает на практике, и учесть возможные ошибки.
+Приоритеты расставлялись по принципу <strong>Must-have, Should-have, Could-have</strong>: сперва самые важные функции, без которых приложение не заработает (регистрация и авторизация). Потом функции, которые улучшают опыт пользователя, но не обязательны для первой версии (отслеживание прогресса), и, наконец, дополнительные фишки вроде офлайн-режима, которые можно добавить позже.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="нефункциональные-требования-для-версии-10">Нефункциональные требования для версии 1.0<a href="#нефункциональные-требования-для-версии-10" class="hash-link" aria-label="Direct link to Нефункциональные требования для версии 1.0" title="Direct link to Нефункциональные требования для версии 1.0">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="compatibility-совместимость">Compatibility (Совместимость):<a href="#compatibility-совместимость" class="hash-link" aria-label="Direct link to Compatibility (Совместимость):" title="Direct link to Compatibility (Совместимость):">​</a></h3>
+<ul>
+<li>Продукт должен поддерживаться в виде приложения на операционных системах: IOS 13.0 и новее, Android 5.0. А также в виде веб версии с условием работы в бразуерах на ядре Chrome, Opera, Safari.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="performance-производительность">Performance (Производительность):<a href="#performance-производительность" class="hash-link" aria-label="Direct link to Performance (Производительность):" title="Direct link to Performance (Производительность):">​</a></h3>
+<ul>
+<li>
+<p><strong>Время отклика интерфейса:</strong> Все элементы интерфейса (кнопки, формы) должны реагировать на действия пользователя за время не более 300 миллисекунд при наличии стабильного интернет-соединения в соответствии с минимальными требованиями.</p>
+</li>
+<li>
+<p><strong>Загрузка видеоуроков:</strong> Видео должно начинаться в течение 1-2 секунд после выбора урока, если скорость интернет-соединения пользователя соответствует минимальным требованиям.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="usability-удобство-использования">Usability (Удобство использования):<a href="#usability-удобство-использования" class="hash-link" aria-label="Direct link to Usability (Удобство использования):" title="Direct link to Usability (Удобство использования):">​</a></h3>
+<ul>
+<li><strong>Интуитивный интерфейс:</strong> Пользовательский интерфейс должен быть простым и понятным, с минимальной потребностью в обучении. Пользователи должны легко находить нужные функции и осуществлять основные действия (регистрация, просмотр уроков, настройка профиля) в пределах 1-2 минут.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scalability-масштабируемость">Scalability (Масштабируемость):<a href="#scalability-масштабируемость" class="hash-link" aria-label="Direct link to Scalability (Масштабируемость):" title="Direct link to Scalability (Масштабируемость):">​</a></h3>
+<ul>
+<li>Приложение должно поддерживать до 10,000 активных пользователей одновременно без снижения производительности.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="manageability--serviceability-управляемость-и-удобство-обслуживания">Manageability &amp; Serviceability (Управляемость и удобство обслуживания):<a href="#manageability--serviceability-управляемость-и-удобство-обслуживания" class="hash-link" aria-label="Direct link to Manageability &amp; Serviceability (Управляемость и удобство обслуживания):" title="Direct link to Manageability &amp; Serviceability (Управляемость и удобство обслуживания):">​</a></h3>
+<ul>
+<li>
+<p>Приложение должно поддерживать удобные инструменты для мониторинга, обновления и устранения ошибок. Разработчики должны иметь доступ к детализированным логам и отчетам об ошибках, а также возможность удаленного развертывания обновлений без прерывания работы системы. Архитектура должна обеспечивать легкость в масштабировании и интеграции новых функций.</p>
+</li>
+<li>
+<p>Приложение должно предусматривать возможность удаленного мониторинга и управления производительностью, обновления системы и исправления ошибок без остановки работы сервиса. Это включает автоматизированное резервное копирование данных пользователей и журналирование критических событий для быстрой диагностики проблем.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="capacity-вместимость">Capacity (Вместимость):<a href="#capacity-вместимость" class="hash-link" aria-label="Direct link to Capacity (Вместимость):" title="Direct link to Capacity (Вместимость):">​</a></h3>
+<ul>
+<li>Приложение должно обеспечивать хранение данных для максимум 100,000 пользователей, включая информацию о профилях, предпочтениях, истории просмотров и прогрессе, без ущерба для производительности системы.</li>
+</ul>
+<hr>
+<p>Я сосредоточился на ключевых аспе ктах, обеспечивающих стабильную работу и удобство использования.</p>
+<p>Некоторые виды НФТ из лекции, такие как безопасность, доступность, надежность и НПТ, были не охвачены, поскольку на начальном этапе мы сосредоточились на основных аспектах, необходимых для успешного запуска. В будущем планируем расширить требования для более полного соответствия ожиданиям пользователей.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/itikineva/doc-as-a-code-workshop/docs/Software Requirements/func_rec_and_non_func.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/guitar-tutor/docs/category/требования"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Требования</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/guitar-tutor/docs/category/апи"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">АПИ</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#use-case-1-регистрация-пользователя-must-have" class="table-of-contents__link toc-highlight">Use Case 1: Регистрация пользователя (Must-have)</a></li><li><a href="#use-case-2-авторизация-пользователя-must-have" class="table-of-contents__link toc-highlight">Use Case 2: Авторизация пользователя (Must-have)</a></li><li><a href="#use-case-3-персонализация-профиля-must-have" class="table-of-contents__link toc-highlight">Use Case 3: Персонализация профиля (Must-have)</a></li><li><a href="#use-case-4-просмотр-библиотеки-видеоуроков-must-have" class="table-of-contents__link toc-highlight">Use Case 4: Просмотр библиотеки видеоуроков (Must-have)</a></li><li><a href="#use-case-5-получение-обратной-связи-в-реальном-времени-must-have" class="table-of-contents__link toc-highlight">Use Case 5: Получение обратной связи в реальном времени (Must-have)</a></li><li><a href="#use-case-6-отслеживание-прогресса-пользователя-should-have" class="table-of-contents__link toc-highlight">Use case 6: Отслеживание прогресса пользователя (Should-have)</a></li><li><a href="#use-case-7-уведомления-о-новых-уроках-и-обновлениях-should-have" class="table-of-contents__link toc-highlight">Use case 7: Уведомления о новых уроках и обновлениях: (Should-have)</a></li><li><a href="#use-case-8-мобильная-версия-офлайн-could-have" class="table-of-contents__link toc-highlight">Use case 8: Мобильная версия офлайн (Could-have)</a></li><li><a href="#нефункциональные-требования-для-версии-10" class="table-of-contents__link toc-highlight">Нефункциональные требования для версии 1.0</a><ul><li><a href="#compatibility-совместимость" class="table-of-contents__link toc-highlight">Compatibility (Совместимость):</a></li><li><a href="#performance-производительность" class="table-of-contents__link toc-highlight">Performance (Производительность):</a></li><li><a href="#usability-удобство-использования" class="table-of-contents__link toc-highlight">Usability (Удобство использования):</a></li><li><a href="#scalability-масштабируемость" class="table-of-contents__link toc-highlight">Scalability (Масштабируемость):</a></li><li><a href="#manageability--serviceability-управляемость-и-удобство-обслуживания" class="table-of-contents__link toc-highlight">Manageability &amp; Serviceability (Управляемость и удобство обслуживания):</a></li><li><a href="#capacity-вместимость" class="table-of-contents__link toc-highlight">Capacity (Вместимость):</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/guitar-tutor/docs/intro">Tutorial</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://x.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">X<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/guitar-tutor/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 My Project, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
