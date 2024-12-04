@@ -31,7 +31,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
 
   trailingSlash: false,
-  deploymentBranch: 'main',
+  deploymentBranch: 'gh-pages',
   
 //подключаем плагин для drawio
   plugins: [
